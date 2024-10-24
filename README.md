@@ -31,7 +31,7 @@ this is a github action script for upload files to server via SFTP protocol.
 
 ```yml
 - name: SFTP uploader
-  uses: wangyucode/sftp-upload-action@v2.0.2
+  uses: danj21/sftp-upload-action@v2.0.2
   with:
     host: 'wycode.cn'
     password: ${{ secrets.password }} 
