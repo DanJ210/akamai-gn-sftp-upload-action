@@ -1,10 +1,10 @@
-# sftp-upload-action
+# akamai-gn-sftp-upload-action
 
 this is a github action script for upload files to server via SFTP protocol.
 
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/wangyucode/sftp-upload-action)
-![release](https://flat.badgen.net/github/release/wangyucode/sftp-upload-action)
-[![Depfu](https://badges.depfu.com/badges/4b5cc2f5563a240e7b6c6106ded3e4c0/overview.svg)](https://depfu.com/github/wangyucode/sftp-upload-action?project_id=37917)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/danj210/akamai-gn-sftp-upload-action)
+![release](https://flat.badgen.net/github/release/danj210/akamai-gn-sftp-upload-action)
+[![Depfu](https://badges.depfu.com/badges/4b5cc2f5563a240e7b6c6106ded3e4c0/overview.svg)](https://depfu.com/github/danj210/akamai-gn-sftp-upload-action?project_id=37917)
 
 ## Inputs
 
@@ -31,7 +31,7 @@ this is a github action script for upload files to server via SFTP protocol.
 
 ```yml
 - name: SFTP uploader
-  uses: danj21/sftp-upload-action@v2.0.2
+  uses: danj21/akamai-gn-sftp-upload-action@v2.0.2
   with:
     host: 'wycode.cn'
     password: ${{ secrets.password }} 
@@ -43,7 +43,7 @@ this is a github action script for upload files to server via SFTP protocol.
 
 ```yml
 - name: SFTP uploader
-  uses: wangyucode/sftp-upload-action@v2.0.2
+  uses: danj210/akamai-gn-sftp-upload-action@v2.0.2
   with:
     host: 'wycode.cn'
     privateKey: ${{ secrets.key }} 
@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📂 SFTP uploader                       # Upload to SFTP 
-        uses: wangyucode/sftp-upload-action@v2.0.2
+        uses: danj210/akamai-gn-sftp-upload-action@v2.0.2
         with:
           host: ${{ secrets.HOST }}                  # Recommended to put the credentials in github secrets.
           username: ${{ secrets.USER }}
@@ -84,7 +84,3 @@ jobs:
 the action will check `modifyTime` and upload the newer files if `forceUpload` is false.
 but you should restore the modified time before uploading.
 here is an action that can change the modified time: https://github.com/marketplace/actions/git-restore-mtime
-
-## Other Options
-
-[Crane](https://github.com/wangyucode/crane) is a simple, fast, and secure tool written in Rust for downloading and deploying your `.tar.gz` archive files without the need for server passwords or keys.
