@@ -1,4 +1,4 @@
-name: 'SFTP uploader'
+name: 'Akamai GN SFTP uploader'
 author: 'danj210'
 branding:
   color: 'green'
